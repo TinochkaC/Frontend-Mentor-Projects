@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="stylesheet" href="mystyle.css">
+  <title>Frontend Mentor | Interactive rating component</title>
+</head>
+
+<body>
+  <div class="window">
+  
+    <!-- Thank you state start  -->
+
+    <img src="C:\Users\cn95628\Documents\Cristina\Interactive rating component\images\illustration-thank-you.svg" width="150" style="margin: auto; padding: 10px 0;">
+
+    <p id="text">You selected <span id="selected-number"></span> out of 5</p>
+
+    <h2 style="margin: 20px auto 0 auto;">Thank you!</h2>
+
+    <p style="text-align: center;">We appreciate you taking the time to give a rating. If you ever need more support, 
+      don’t hesitate to get in touch!</p>
+
+    <!-- Thank you state end -->
+
+    <script>
+      const selectedNumber = localStorage.getItem('selectedNumber'); 
+      if (selectedNumber) {
+        document.getElementById('selected-number').textContent = selectedNumber;
+      }
+      else {
+        document.getElementById('selected-number').textConten = '0';
+      }
+    </script>
+
+  </div>
+
+</body>
+
+</html>

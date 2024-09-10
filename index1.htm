@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="stylesheet" href="mystyle.css">
+  <title>Frontend Mentor | Interactive rating component</title>
+</head>
+
+<body>
+  <div class="window">
+
+    <!-- Rating state start -->
+
+    <img id="star" src="C:\Users\cn95628\Documents\Cristina\Interactive rating component\images\icon-star.svg" width="15" height="15">
+
+    <h2>How did we do?</h2>
+
+    <p>Please let us know how we did with your support request.
+      All feedback is appreciated to help us improve our offering!</p>
+
+    <div id="container">
+      <p class="number" data-number="1">1</p>
+      <p class="number" data-number="2">2</p>
+      <p class="number" data-number="3">3</p>
+      <p class="number" data-number="4">4</p>
+      <p class="number" data-number="5">5</p>
+    </div>
+
+    <a href="C:\Users\cn95628\Documents\Cristina\index2.htm" class="button">SUBMIT</a>
+
+    <script>
+      const numbers = document.querySelectorAll('.number')
+      numbers.forEach(number =>
+        {
+          number.addEventListener('click', function() {
+            numbers.forEach(nbr =>
+              nbr.classList.remove('selected'));
+              this.classList.add('selected');
+              const selectedNumber = this.getAttribute('data-number');
+              localStorage.setItem('selectedNumber', selectedNumber);
+          })
+
+        }
+      )
+    </script>
+
+    <!-- Rating state end -->
+
+  </div>
+
+</body>
+
+</html>
